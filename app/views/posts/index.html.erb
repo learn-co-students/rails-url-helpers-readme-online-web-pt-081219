@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post) %></div>
+<% end %>
+<%# rails already knows that the post object has an id thats why we didn't need to hard-code/interpolate #{post.id} %>
+<%# We're using the link_to method to automatically create an HTML a tag. If you open the browser and inspect the HTML element of the link %>
